@@ -19,7 +19,9 @@
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".EditTextActivity" />
-        <activity android:name=".RadioButtonActivity"></activity>
+        <activity android:name=".RadioButtonActivity" />
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".ImageViewActivity"></activity>
     </application>
 
 </manifest>

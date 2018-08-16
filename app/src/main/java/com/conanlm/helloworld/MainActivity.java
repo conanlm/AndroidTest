@@ -1,5 +1,6 @@
 package com.conanlm.helloworld;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnButton;
     private Button mBtnEdittext;
     private Button mbtnRadioButton;
+    private Button mbtnCheckBox;
+    private Button mbtnImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
         mbtnRadioButton=findViewById(R.id.btn_radiobutton);
+        mbtnCheckBox=findViewById(R.id.btn_checkbox);
         setListeners();
     }
 
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton.setOnClickListener(onClick);
         mBtnEdittext.setOnClickListener(onClick);
         mbtnRadioButton.setOnClickListener(onClick);
+        mbtnCheckBox.setOnClickListener(onClick);
+        mbtnImageView.setOnClickListener(onClick);
 
     }
 
@@ -84,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_radiobutton:
                     //跳转到RadioButtonActivity界面
                     intent =new Intent(MainActivity.this, RadioButtonActivity.class);
+                    break;
+                case R.id.btn_checkbox:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, CheckBoxActivity.class);
+                    break;
+                case R.id.btn_imageview:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, ImageViewActivity.class);
                     break;
 
             }
