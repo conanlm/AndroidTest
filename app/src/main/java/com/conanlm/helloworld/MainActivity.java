@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.conanlm.helloworld.listview.ListViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mbtnRadioButton;
     private Button mbtnCheckBox;
     private Button mbtnImageView;
+    private Button mbtnListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         mbtnRadioButton=findViewById(R.id.btn_radiobutton);
         mbtnCheckBox=findViewById(R.id.btn_checkbox);
+        mbtnImageView=findViewById(R.id.btn_imageview);
+        mbtnListView=findViewById(R.id.btn_listview);
         setListeners();
     }
 
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mbtnRadioButton.setOnClickListener(onClick);
         mbtnCheckBox.setOnClickListener(onClick);
         mbtnImageView.setOnClickListener(onClick);
+        mbtnListView.setOnClickListener(onClick);
 
     }
 
@@ -98,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_imageview:
                     //跳转到RadioButtonActivity界面
                     intent =new Intent(MainActivity.this, ImageViewActivity.class);
+                    break;
+                case R.id.btn_listview:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, ListViewActivity.class);
                     break;
 
             }
