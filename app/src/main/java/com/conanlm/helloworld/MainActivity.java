@@ -4,13 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.conanlm.helloworld.gridview.GridViewActivity;
 import com.conanlm.helloworld.listview.ListViewActivity;
+import com.conanlm.helloworld.recyclerview.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mbtnCheckBox;
     private Button mbtnImageView;
     private Button mbtnListView;
+    private Button mbtnGridView;
+    private Button mBtnRv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         mbtnCheckBox=findViewById(R.id.btn_checkbox);
         mbtnImageView=findViewById(R.id.btn_imageview);
         mbtnListView=findViewById(R.id.btn_listview);
+        mbtnGridView=findViewById(R.id.btn_gridview);
+        mBtnRv=findViewById(R.id.btn_recyclerview);
         setListeners();
     }
 
@@ -72,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
         mbtnCheckBox.setOnClickListener(onClick);
         mbtnImageView.setOnClickListener(onClick);
         mbtnListView.setOnClickListener(onClick);
-
+        mbtnGridView.setOnClickListener(onClick);
+        mBtnRv.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -108,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_listview:
                     //跳转到RadioButtonActivity界面
                     intent =new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_gridview:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_recyclerview:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
 
             }
