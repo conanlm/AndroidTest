@@ -12,3 +12,4 @@ flags:
     FROM_HTML_MODE_LEGACY：html块元素之间使用两个换行符分隔
 
 
+* 安卓6.0默认阻止http请求在AndroidMainfest.xml里添加android:usesCleartextTraffic="true"的属性就可以了
