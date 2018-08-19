@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mbtnListView;
     private Button mbtnGridView;
     private Button mBtnRv;
+    private Button mBtnWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         mbtnListView=findViewById(R.id.btn_listview);
         mbtnGridView=findViewById(R.id.btn_gridview);
         mBtnRv=findViewById(R.id.btn_recyclerview);
+        mBtnWebView=findViewById(R.id.btn_webview);
         setListeners();
     }
 
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         mbtnListView.setOnClickListener(onClick);
         mbtnGridView.setOnClickListener(onClick);
         mBtnRv.setOnClickListener(onClick);
+        mBtnWebView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -125,7 +128,10 @@ public class MainActivity extends AppCompatActivity {
                     //跳转到RadioButtonActivity界面
                     intent =new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
-
+                case R.id.btn_webview:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(MainActivity.this, WebViewActivity.class);
+                    break;
             }
             startActivity(intent);
         }
