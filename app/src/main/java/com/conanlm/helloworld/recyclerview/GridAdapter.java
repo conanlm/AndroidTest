@@ -7,30 +7,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.conanlm.helloworld.R;
 
 /**
- * 作者  $USER_NAME
- * 时间  2018/8/17 13:31
+ * 作者  conanlm
+ * 时间  2018/8/19 09:28
  */
-public class LinearAdapter extends RecyclerView.Adapter <LinearAdapter.LinearViewHolder>{
+public class GridAdapter extends RecyclerView.Adapter <GridAdapter.LinearViewHolder>{
     private Context mContext;
     private OnItemClickListener mListener;
-    public LinearAdapter(Context context,OnItemClickListener listener){
+    public GridAdapter(Context context, OnItemClickListener listener){
         this.mContext=context;
         this.mListener=listener;
     }
     @NonNull
     @Override
-    public LinearAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item,viewGroup,false));
+    public GridAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_grid_recyclerview_item,viewGroup,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LinearAdapter.LinearViewHolder viewHolder, final int i) {
-        viewHolder.textView.setText("Hello World");
+    public void onBindViewHolder(@NonNull GridAdapter.LinearViewHolder viewHolder, final int i) {
+        viewHolder.textView.setText("Hello");
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +47,7 @@ public class LinearAdapter extends RecyclerView.Adapter <LinearAdapter.LinearVie
 
     @Override
     public int getItemCount() {
-        return 30;
+        return 80;
     }
     class LinearViewHolder extends RecyclerView.ViewHolder{
         private TextView textView;
