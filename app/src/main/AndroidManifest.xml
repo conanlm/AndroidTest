@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UIActivity">
-
-        </activity>
+        <activity android:name=".UIActivity" />
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".EditTextActivity" />
@@ -38,6 +36,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CustomDialogActivity" />
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".PopupWindowActivity"></activity>
     </application>
 
 </manifest>

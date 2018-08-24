@@ -25,6 +25,9 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnWebView;
     private Button mBtnToast;
     private Button mbtnDialog;
+    private Button mbtnCustomDialog;
+    private Button mbtnProgress;
+    private Button mbtnPopupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,9 @@ public class UIActivity extends AppCompatActivity {
         mBtnWebView=findViewById(R.id.btn_webview);
         mBtnToast=findViewById(R.id.btn_toast);
         mbtnDialog=findViewById(R.id.btn_dialog);
+        mbtnCustomDialog=findViewById(R.id.btn_custom_dialog);
+        mbtnProgress=findViewById(R.id.btn_progress);
+        mbtnPopupWindow=findViewById(R.id.btn_popupwindow);
         setListeners();
     }
 
@@ -85,6 +91,9 @@ public class UIActivity extends AppCompatActivity {
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
         mbtnDialog.setOnClickListener(onClick);
+        mbtnCustomDialog.setOnClickListener(onClick);
+        mbtnProgress.setOnClickListener(onClick);
+        mbtnPopupWindow.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -140,6 +149,18 @@ public class UIActivity extends AppCompatActivity {
                 case R.id.btn_dialog:
                     //跳转到RadioButtonActivity界面
                     intent =new Intent(UIActivity.this, DialogActivity.class);
+                    break;
+                case R.id.btn_custom_dialog:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(UIActivity.this, CustomDialogActivity.class);
+                    break;
+                case R.id.btn_progress:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(UIActivity.this, ProgressActivity.class);
+                    break;
+                case R.id.btn_popupwindow:
+                    //跳转到RadioButtonActivity界面
+                    intent =new Intent(UIActivity.this, PopupWindowActivity.class);
                     break;
             }
             startActivity(intent);
